@@ -1,6 +1,6 @@
 body {
-  font-family: 'MuseoSansCyrl', sans-serif;;
-  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -10,6 +10,19 @@ body {
 
 *, *:before, *:after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
 }
 
 a, button, input, select, textarea, [contenteditable="true"], [tabindex] {
