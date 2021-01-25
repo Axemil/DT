@@ -1,16 +1,168 @@
+
 .main_section{
   background-color: #0074BC;
   background-repeat: no-repeat;
   background-size: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.bigTopCircle{
+  width: 472px;
+  height: 472px;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translate(-10%, -50%);
+  position: absolute;
+  background: #05BCCC;
+  border-radius: 50%;
+  z-index: 1;
+  animation: bigTopCircle 8s infinite ease-in-out alternate;
+}
+@keyframes bigTopCircle {
+  0%{
+    transform: translate(-10%, -50%);
+  }
+  100%{
+    transform: translate(-5%, -60%);
+  }
+}
+@media (min-width: 720px){
+  .bigTopCircle{
+    width: 557px;
+    height: 557px;
+  }
+}
+.littleTopCircle{
+  width: 40px;
+  height: 40px;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translate(-500%,210%);
+  position: absolute;
+  background: #05BCCC;
+  border-radius: 50%;
+  z-index: 1;
+  animation: littleTopCircle 8s infinite ease-in-out alternate;
+}
+@media (min-width: 720px){
+  .littleTopCircle{
+    left: 45%;
+  }
+}
+@keyframes littleTopCircle{
+  0%{
+    transform: translate(-400%,210%);
+    background: #05BCCC;
+  }
+  100%{
+    transform: translate(-500%,50%);
+    background: #FF8500;
+  }
+}
+.middleCircle{
+  width: 140px;
+  height: 140px;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translate(-170%,100%);
+  position: absolute;
+  background: #05BCCC;
+  border-radius: 50%;
+  z-index: 1;
+  animation: middleCircle 11s infinite ease-in-out alternate;
+  // animation: littleTopCircle 8s infinite ease-in-out alternate;
+}
+@keyframes middleCircle{
+  0%{
+    transform: translate(-170%,100%);
+  }
+  100%{
+    transform: translate(-170%,10%);
+  }
+}
+@media (min-width: 720px){
+  .middleCircle{
+    width: 182px;
+    height: 182px;
+    left: 35%;
+  }
+  @keyframes middleCircle{
+    0%{
+      transform: translate(-170%,130%);
+    }
+    100%{
+      transform: translate(-170%,10%);
+    }
+  }
+}
+.middleWaves{
+  display: block;
+  top: 0;
+  left: 50%;
+  width: 100px;
+  transform: translate(130%,50%);
+  position: absolute;
+  z-index: 1;
+  animation: middleWaves 11s infinite ease-in-out alternate;
+  & svg{
+    display: block;
+    width: 100%;
+  }
+  & path{
+    fill: #05BCCC;
+    animation: middleWavesColor 11s infinite ease-in-out alternate;
+  }
+}
+@media (min-width: 720px){
+  .middleWaves{
+    width: 202px;
+    left: 40%;
+  }
+}
+@keyframes middleWaves{
+  0%{
+    transform: translate(130%,50%);
+    fill: #05BCCC;
+  }
+  100%{
+    transform: translate(130%,200%);
+    fill: #FFDD15;
+  }
+}
+@media (min-width: 720px){
+  @keyframes middleWaves{
+    0%{
+      transform: translate(130%,50%);
+      fill: #05BCCC;
+    }
+    100%{
+      transform: translate(130%,350%);
+      fill: #FFDD15;
+    }
+  }
+}
+@keyframes middleWavesColor{
+  0%{
+    fill: #05BCCC;
+  }
+  100%{
+    fill: #FFDD15;
+  }
 }
 .main_logo{
   padding: 50px 0 0 0;
-  margin: 0 auto 30px;
+  margin: 0 auto 34px;
   max-width: 250px;
+  position: relative;
+  z-index: 2;
 }
 @media (min-width: 720px){
   .main_logo{
     max-width: 325px;
+    margin: 0 auto 30px;
   }
 }
 .main_subheader{
@@ -34,9 +186,20 @@
 .main_item-image_first{
   margin: 40px auto 15px;
   max-width: 625px;
+  position: relative;
+  z-index: 2;
+}
+.main_item-image_first img{
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 720px){
+  .main_item-image_first{
+    margin: 20px auto 10px;
+  }
 }
 .main_list{
-  padding: 0 20px;
+  padding: 0 10px 0 20px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -74,6 +237,8 @@
   text-align: left;
   padding: 0 20px;
   margin: 0 auto 50px;
+  z-index: 2;
+  position: relative;
 }
 
 @media (min-width: 720px){
@@ -86,6 +251,12 @@
   width: 58px;
   position: absolute;
   right: 0;
+}
+
+@media (min-width: 720px){
+  .tooth_1{
+    transform: translateY(10px);
+  }
 }
 
 .tooth_2{
@@ -101,6 +272,78 @@
   max-width: 525px;
 }
 
+.main_item-image_second img{
+  position: relative;
+  z-index: 1;
+}
+
+.bigBottomCircle{
+  width: 551px;
+  height: 551px;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translate(-90%,10%);
+  position: absolute;
+  background: #05BCCC;
+  border-radius: 50%;
+  z-index: 1;
+  animation: bigBottomCircle 7s infinite ease-in-out alternate;
+}
+
+@media (min-width: 720px){
+  .bigBottomCircle{
+    width: 718px;
+    height: 718px;
+    left: 60%;
+  }
+}
+
+@keyframes bigBottomCircle{
+  0%{
+    transform: translate(-90%,10%);
+  }
+  100%{
+    transform: translate(-90%,0%);
+  }
+}
+
+.littleBottomCircle{
+  width: 75px;
+  height: 75px;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translate(195%,-50%);
+  position: absolute;
+  background: #FF8500;
+  border-radius: 50%;
+  z-index: 1;
+  animation: littleBottomCircle 7s infinite ease-in-out alternate;
+}
+
+@media (min-width: 720px){
+  .littleBottomCircle{
+    left: 60%;
+  }
+}
+
+@keyframes littleBottomCircle{
+  0%{
+    transform: translate(195%,-50%);
+  }
+  100%{
+    transform: translate(195%,-110%);
+  }
+}
+
+
+@media (min-width: 720px){
+  .main_item-image_second{
+    padding: 0;
+  }
+}
+
 .main_list-info{
   display: flex;
   justify-content: center;
@@ -112,7 +355,7 @@
 .corners_1{
   position: absolute;
   left: 20px;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
   width: 29px;
 }
@@ -132,6 +375,7 @@
   width: 51px;
 }
 .instagram_block{
+  position: relative;
   padding: 0 20px 50px;
 }
 .instagram_block img{
@@ -151,9 +395,14 @@
 }
 .instagram_list{
   background: #009dff;
-  margin: 50px auto 0;
+  margin: 30px auto 0;
   max-width: 710px;
-  height: 470px;
+  height: 371px;
+}
+@media(min-width: 720px){
+  .instagram_list{
+    height: 468px;
+  }
 }
 .mail-to{
   margin: 0 auto 50px;
@@ -161,16 +410,22 @@
   position: relative;
   z-index: 2;
 }
+@media(min-width: 720px){
+  .mail-to{
+    margin: 0 auto 45px;
+  }
+}
 .corners_2{
   width: 29px;
   right: 16px;
-  top: 50%;
+  top: 90%;
   transform: translateY(-50%);
   position: absolute;
 }
-@media(min-width: 710px){
+@media(min-width: 720px){
   .corners_2{
-    right: 0;
+    right: 4px;
+    top: 40%;
   }
 }
 .mail-to p, .mail-to a{
@@ -198,7 +453,7 @@
 .copyright{
   font-size: 14px;
   font-style: normal;
-  font-weight: 200;
+  font-weight: 100;
   line-height: 17px;
   letter-spacing: 0em;
   text-align: center;
