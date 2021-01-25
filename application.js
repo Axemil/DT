@@ -1,0 +1,1 @@
+"use strict";!function(n){!function(){console.log("=> fn")}(),function(n){n(window).scroll(function(){n(".main_item-image_first").css("transform","translateY("+-(n(window).scrollTop()/10)+"px)"),n(".main_item-image_second").css("transform","translateY("+-(n(window).scrollTop()/15-30)+"px)")})}(jQuery)}(jQuery);
