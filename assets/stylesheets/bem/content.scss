@@ -1,10 +1,138 @@
+$purple: #8a15ff;
+$blue: #3800e7;
+$ltblue: #15e0ff;
+$magenta: #d000c5;
 
+
+*{
+  text-rendering: geometricPrecision;
+}
+body{
+  position: relative;
+}
+
+
+
+
+.animationBackground{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient($blue, $purple);
+  z-index: 1;
+
+  .animationBigTopCircle{
+    width: 50rem;
+    height: 50rem;
+    background: linear-gradient($blue, $purple);
+    top: 0;
+    left: 50%;
+    border-radius: 50%;
+    position: absolute;
+    animation: animationBigTopCircle 11s infinite ease-in-out alternate;
+  }
+  @keyframes animationBigTopCircle {
+    from {
+      transform: translate(0%, 20%) rotate(0deg);
+    }
+    to {
+      transform: translate(10%, -50%) rotate(360deg);
+    }
+  }
+  .animationCenteredCircle{
+    width: 10rem;
+    height: 10rem;
+    background: linear-gradient($blue, $purple);
+    top: 0;
+    left: 50%;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-170%,130%) rotate(0deg);
+    animation: animationCenteredCircle 8s infinite ease-in-out alternate;
+  }
+  @keyframes animationCenteredCircle {
+    from {
+      transform: translate(-170%,130%) rotate(0deg);
+    }
+    to {
+      transform: translate(-100%,10%) rotate(0deg);
+    }
+  }
+  .animationBottomCircle{
+    width: 40rem;
+    height: 40rem;
+    background: linear-gradient($blue, $magenta);
+    top: 0;
+    left: 50%;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-90%,70%) rotate(0deg);
+    animation: animationBottomCircle 5s infinite ease-in-out alternate;
+  }
+  @keyframes animationBottomCircle {
+    from {
+      transform: translate(-90%,70%) rotate(0deg);
+    }
+    to {
+      transform: translate(-90%,70%) rotate(360deg);
+    }
+  }
+  @media (min-width: 720px) {
+    @keyframes animationBottomCircle {
+      from {
+        transform: translate(-90%,100%) rotate(0deg);
+      }
+      to {
+        transform: translate(-90%,100%) rotate(360deg);
+      }
+    }
+  }
+  .animationRightCircle{
+    width: 20rem;
+    height: 20rem;
+    background: linear-gradient($blue, $ltblue);
+    opacity: 0.5;
+    top: 0;
+    left: 50%;
+    border-radius: 50%;
+    position: absolute;
+    animation: animationRightCircle 9s infinite ease-in-out alternate;
+  }
+  @keyframes animationRightCircle {
+    from {
+      transform: translate(100%,40%) rotate(0deg);
+    }
+    to {
+      transform: translate(100%,40%) rotate(360deg);
+    }
+  }
+  .animationDottedCircle{
+    width: 20rem;
+    height: 20rem;
+    border: 1px dashed #fff;
+    opacity: 0.8;
+    top: 0;
+    left: 50%;
+    border-radius: 50%;
+    position: absolute;
+    animation: animationDottedCircle 12s infinite ease-in-out alternate;
+  }
+
+  @keyframes animationDottedCircle {
+    from {
+      transform: translate(70%,80%) rotate(0deg);
+    }
+    to {
+      transform: translate(70%,80%) rotate(360deg);
+    }
+  }
+}
 .main_section{
-  background-color: #0074BC;
-  background-repeat: no-repeat;
-  background-size: 100%;
   position: relative;
   overflow: hidden;
+  z-index: 20;
 }
 .bigTopCircle{
   width: 472px;
@@ -168,7 +296,7 @@
 .main_subheader{
   font-size: 25px;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 30px;
   letter-spacing: 0em;
   text-align: center;
@@ -221,7 +349,7 @@
   font-family: Montserrat;
   font-size: 19px;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
@@ -231,7 +359,7 @@
   max-width: 710px;
   font-size: 19px;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
@@ -351,6 +479,7 @@
   margin: 0 auto 50px;
   position: relative;
   max-width: 710px;
+  z-index: 10;
 }
 
 .corners_1{
@@ -387,7 +516,7 @@
 .instagram_block p{
   font-size: 19px;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 23px;
   letter-spacing: 0em;
   text-align: center;
@@ -432,7 +561,7 @@
 .mail-to p, .mail-to a{
   font-size: 19px;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 23px;
   letter-spacing: 0em;
   text-align: center;
@@ -441,20 +570,27 @@
   display: block;
   color: #FFF200;
   position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+.mail-to a:hover::after{
+  opacity: 0;
 }
 .mail-to a::after{
   content: ' ';
   width: 85px;
-  border: 0.8px solid #FFF200;
+  border: 1px solid #FFF200;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   top: 25px;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
 }
 .copyright{
   font-size: 14px;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 17px;
   letter-spacing: 0em;
   text-align: center;
