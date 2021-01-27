@@ -1,12 +1,8 @@
 @import "node_modules/normalize.css/normalize";
 @import "node_modules/bourbon/core/_bourbon";
 
-// mixins
-@import "mixins/icon";
-
 @import "fonts";
 @import "defaults";
-@import "icons";
 
 // bem blocks
 @import "bem/header";

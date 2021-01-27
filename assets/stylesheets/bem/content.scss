@@ -508,11 +508,6 @@ body{
   position: relative;
   padding: 0 20px 50px;
 }
-.instagram_block img{
-  margin: 0 auto 25px;
-  max-width: 35px;
-  display: block;
-}
 .instagram_block p{
   font-size: 19px;
   font-style: normal;
@@ -523,11 +518,31 @@ body{
   max-width: 370px;
   margin: 0 auto;
 }
-.instagram_list{
-  background: #009dff;
-  margin: 30px auto 0;
-  max-width: 710px;
-  height: 371px;
+.inst_icon{
+  width: 35px;
+  margin: 0 auto 25px;
+}
+.instagramBlock{
+  margin: 50px auto 0;
+  max-width: 720px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  & a{
+    display: flex;
+    align-items: center;
+    width: 33%;
+    margin-bottom: 20px;
+    @media (max-width: 600px ){
+      margin-bottom: 10px;
+      width: 31%;
+    }
+    & img{
+      max-width: 224px;
+      width: 100%;
+    }
+  }
 }
 @media(min-width: 720px){
   .instagram_list{
